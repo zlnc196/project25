@@ -22,7 +22,7 @@ func main() {
 	log.Println("Server is running")
 	err = http.ListenAndServe(fmt.Sprintf(":%s", serverPort), router) //This will run the server and listen for requests
 	if err != nil { 
-		log.Fatalln("Error occured in server: %s", err)
+		log.Fatalf("Error occured in server: %s", err)
 	}
 
 }

@@ -18,6 +18,6 @@ func createUserDB(db *gorm.DB, username string, password string) {
 	newRow := User{Username:username, Password:password}
 	err := db.Model(&User{}).Create(&newRow).Error
 	if err != nil {
-		log.Println("Error in creating new user due to: %s", err)
+		log.Printf("Error in creating new user due to: %s", err)
 	}
 }
